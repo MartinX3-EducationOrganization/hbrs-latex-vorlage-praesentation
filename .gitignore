@@ -1,0 +1,23 @@
+.DS_Store
+.redcar
+*.aux
+*.bak
+*.bbl
+*.blg
+*.brf
+*.dvi
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.ps
+*.sav
+*.toc
+*.glo
+*.ist
+out
+#IntelliJ folder
+.idea
