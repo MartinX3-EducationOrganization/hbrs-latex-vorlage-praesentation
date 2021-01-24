@@ -1,4 +1,4 @@
-DOCUMENT_NAME = Arbeit
+DOCUMENT_NAME = Praesentation
 BIB = biber -output-directory=out # BibLaTeX
 GLOS = makeglossaries -d out # Glossaries
 LuaLaTeX = lualatex --output-directory=out
