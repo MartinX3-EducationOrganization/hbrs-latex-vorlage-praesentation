@@ -1,29 +1,25 @@
 DOCUMENT_NAME = Praesentation
 BIB = biber -output-directory=out # BibLaTeX
-GLOS = makeglossaries -d out # Glossaries
-LuaLaTeX = lualatex --output-directory=out
+LuaLaTeX = lualatex --shell-escape --output-directory=out
 
-default: 
+default:
 	@echo 'make all    | Erstelle das komplette Dokument inklusive bib-Datei für das Literaturverzeichnis'
 	@echo 'make bib    | Erstelle bib-Datei für Literaturverzeichnis'
 	@echo 'make doc    | Erstelle komplettes Dokument und lese die Ausgabe. Falls Fehler auftreten führe make bib oder make doc erneut aus.'
 	@echo 'make clean  | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
 
 
-all: doc gloss bib doc_twice
+all: doc bib doc_twice
 
-bib: 
+bib:
 	$(BIB) $(DOCUMENT_NAME)
 
 clean:
 	rm -f .log quit.tex *.acn *gdf *.glg *. glo *. gls *.ist *.lol *.nlo *.nls *.ps *.out *.dvi *.log *.aux *.blg *.toc *.log *.bbl *.lof *.lot *.idx *.brf *.ilg *.ind abschnitte/*.aux bilder/*.aux
 
-doc: 
+doc:
 	$(LuaLaTeX) $(DOCUMENT_NAME)
 
-doc_twice: 
+doc_twice:
 	$(LuaLaTeX) $(DOCUMENT_NAME)
 	$(LuaLaTeX) $(DOCUMENT_NAME)
-
-gloss:
-	$(GLOS) $(DOCUMENT_NAME)
