@@ -8,6 +8,9 @@ der [Hochschule Bonn-Rhein-Sieg][3].
 Um diese Vorlage nutzen zu können, muss [LaTeX][1] auf Deinem Rechner installiert sein. Als compiler wird `LuaLaTeX`
 verwendet.
 
+Als PDF-Viewer sollte [PDFPC](https://github.com/pdfpc/pdfpc) verwendet werden.  
+Dieser zeigt via pdfpc erzeugte Präsentationsnotizen an.
+
 ### LEA Gruppe
 
 Einen Startpunkt zur Nutzung von [LaTeX][1] findest Du in unserer LEA Gruppe [Arbeiten mit LaTeX][7]. Sie steht allen
