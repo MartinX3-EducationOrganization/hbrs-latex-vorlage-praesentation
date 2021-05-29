@@ -1,6 +1,6 @@
 # H-BRS LaTeX Vorlage
 
-Dies ist eine [LaTeX][1] Vorlage Präsentationen von für wissenschaftliche Arbeiten des [Fachbereichs Informatik][2]
+Dies ist eine [LaTeX][1] Vorlage Präsentationen von wissenschaftlichen Arbeiten des [Fachbereichs Informatik][2]
 der [Hochschule Bonn-Rhein-Sieg][3].
 
 ## Einstieg
@@ -21,7 +21,7 @@ Angehörigen der Hochschule offen.
 
 ## Lizenz
 
-Dieses Projekt ist unter der GNU GPLv3 lizenziert.  
+Dieses Projekt ist unter der GNU AGPLv3 lizenziert.  
 Weitere Informationen dazu unter [LICENSE.md][5].
 
 [1]: https://www.latex-project.org/
