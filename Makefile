@@ -1,6 +1,6 @@
 DOCUMENT_NAME = Praesentation
 BIB = biber -output-directory=out # BibLaTeX
-LuaLaTeX = lualatex --shell-escape --output-directory=out
+LaTeX = xelatex --shell-escape --output-directory=out
 
 default:
 	@echo 'make all    | Erstelle das komplette Dokument inklusive bib-Datei für das Literaturverzeichnis'
@@ -18,8 +18,8 @@ clean:
 	rm -f .log quit.tex *.acn *gdf *.glg *. glo *. gls *.ist *.lol *.nlo *.nls *.ps *.out *.dvi *.log *.aux *.blg *.toc *.log *.bbl *.lof *.lot *.idx *.brf *.ilg *.ind abschnitte/*.aux bilder/*.aux
 
 doc:
-	$(LuaLaTeX) $(DOCUMENT_NAME)
+	$(LaTeX) $(DOCUMENT_NAME)
 
 doc_twice:
-	$(LuaLaTeX) $(DOCUMENT_NAME)
-	$(LuaLaTeX) $(DOCUMENT_NAME)
+	$(LaTeX) $(DOCUMENT_NAME)
+	$(LaTeX) $(DOCUMENT_NAME)
