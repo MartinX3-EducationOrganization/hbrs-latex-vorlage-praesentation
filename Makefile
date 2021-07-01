@@ -1,25 +1,12 @@
 DOCUMENT_NAME = Praesentation
-BIB = biber -output-directory=out # BibLaTeX
-LaTeX = xelatex --shell-escape --output-directory=out
+LUALATEX = latexmk -xelatex --output-directory=out
 
 default:
-	@echo 'make all    | Erstelle das komplette Dokument inklusive bib-Datei für das Literaturverzeichnis'
-	@echo 'make bib    | Erstelle bib-Datei für Literaturverzeichnis'
-	@echo 'make doc    | Erstelle komplettes Dokument und lese die Ausgabe. Falls Fehler auftreten führe make bib oder make doc erneut aus.'
-	@echo 'make clean  | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
+	$(LUALATEX) $(DOCUMENT_NAME)
 
-
-all: doc bib doc_twice
-
-bib:
-	$(BIB) $(DOCUMENT_NAME)
+help:
+	@echo 'make       | Erstelle das komplette Dokument mit latexmk'
+	@echo 'make clean | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
 
 clean:
 	rm -f .log quit.tex *.acn *gdf *.glg *. glo *. gls *.ist *.lol *.nlo *.nls *.ps *.out *.dvi *.log *.aux *.blg *.toc *.log *.bbl *.lof *.lot *.idx *.brf *.ilg *.ind abschnitte/*.aux bilder/*.aux
-
-doc:
-	$(LaTeX) $(DOCUMENT_NAME)
-
-doc_twice:
-	$(LaTeX) $(DOCUMENT_NAME)
-	$(LaTeX) $(DOCUMENT_NAME)
