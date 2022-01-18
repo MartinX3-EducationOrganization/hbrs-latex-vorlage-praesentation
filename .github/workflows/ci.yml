@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: dante-ev/latex-action@latest
+        with:
+          args: -xelatex --output-directory=out
+          root_file: Praesentation.tex
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Praesentation.pdf.zip
+          path: out/Praesentation.pdf
