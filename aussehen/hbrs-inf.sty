@@ -1,10 +1,17 @@
-\usepackage{graphicx}
-\usepackage{svg}
+%! Package = hbrs-inf
+%! Author = martin
+%! Date = 18.01.22
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{aussehen/hbrs-inf}[2022/01/18 hbrs-inf theming Package]
+
+\RequirePackage{graphicx}
+\RequirePackage{svg}
 \usepackage[ngerman]{babel,isodate}
-\usepackage{csquotes}
-\usepackage{datetime}
-\usepackage{fontspec}
-\usepackage{xcolor}
+\RequirePackage{csquotes}
+\RequirePackage{datetime}
+\RequirePackage{fontspec}
+\RequirePackage{xcolor}
 
 % Einstellungen für die Präsentation
 \usetheme{Ilmenau}
@@ -17,10 +24,10 @@
 
 % Präsentationsnotizen auf 2. Bildschirm
 % Programm pdfpc wird benötigt https://pdfpc.github.io/ https://github.com/pdfpc/pdfpc
-\usepackage{pdfpc}
+\RequirePackage{pdfpc}
 
 % Metadaten für die PDF-Datei
-\usepackage{hyperref}
+\RequirePackage{hyperref}
 \hypersetup{
     pdftitle={\ThesisTitle},
     pdfsubject={\ThesisSubject},
@@ -37,14 +44,14 @@
 \setbeamertemplate{bibliography item}{}
 
 % Quellcode einfuegen und highlighten
-\usepackage{listings}
+\RequirePackage{listings}
 \definecolor{light-gray}{gray}{0.80}
 \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt,showstringspaces=false}
 \lstset{basicstyle=\ttfamily\small,commentstyle=\itshape,backgroundcolor=\color{light-gray}}
 \lstset{captionpos=b,extendedchars=true,inputencoding=utf8,breaklines=true,language=C++}
 
 % Gantt-Diagramm unterstützung
-\usepackage{pgfgantt}
+\RequirePackage{pgfgantt}
 
 %%%%%%%%
 %Makros
