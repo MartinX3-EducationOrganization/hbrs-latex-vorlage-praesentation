@@ -5,12 +5,15 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{aussehen/hbrs-inf}[2022/01/18 hbrs-inf theming Package]
 
+% Enable the arial font
+\RequirePackage{fontspec}
+\setmainfont{Arial} % If an error tells you, that this font can't be found, please install it on your computer.
+
 \RequirePackage{graphicx}
 \RequirePackage{svg}
 \usepackage[ngerman]{babel,isodate}
 \RequirePackage{csquotes}
 \RequirePackage{datetime}
-\RequirePackage{fontspec}
 \RequirePackage{xcolor}
 
 % Einstellungen für die Präsentation
@@ -22,9 +25,10 @@
 \date{\ThesisPubDate}
 \logo{\includegraphics[height=0.5cm]{bilder/fhlogo}}
 
+% TODO Workaround if an texlive version older than 2021 is used, like in github actions. The file gets added by github-actions.
 % Präsentationsnotizen auf 2. Bildschirm
 % Programm pdfpc wird benötigt https://pdfpc.github.io/ https://github.com/pdfpc/pdfpc
-\RequirePackage{pdfpc}
+\IfFileExists{aussehen/pdfpc.sty}{\RequirePackage{aussehen/pdfpc}}{\RequirePackage{pdfpc}}
 
 % Metadaten für die PDF-Datei
 \RequirePackage{hyperref}
