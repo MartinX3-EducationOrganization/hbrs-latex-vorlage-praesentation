@@ -7,9 +7,7 @@
 
 \RequirePackage{graphicx}
 \RequirePackage{svg}
-\RequirePackage{csquotes}
 \RequirePackage{datetime}
-\RequirePackage{xcolor}
 
 % Einstellungen für die Präsentation
 \usetheme{Ilmenau}
@@ -39,18 +37,18 @@
 \usepackage[ngerman]{babel}
 \usepackage[ngerman]{isodate}
 
+% Quellcode einfügen und highlighten
+\RequirePackage[outputdir=out]{minted} % Needs python installed and to be loaded before csquotes
+
+%% Literatur
+% Zitate
+\RequirePackage{csquotes}
+
 % Literaturverzeichnis nach ISO 690 (Nachfolger von DIN 1505)
 % Further help at https://github.com/michal-h21/biblatex-iso690
 \usepackage[style=iso-authortitle]{biblatex}
 \addbibresource{datenbanken/Literaturverzeichnis.bib}
 \setbeamertemplate{bibliography item}{}
-
-% Quellcode einfuegen und highlighten
-\RequirePackage{listings}
-\definecolor{light-gray}{gray}{0.80}
-\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt,showstringspaces=false}
-\lstset{basicstyle=\ttfamily\small,commentstyle=\itshape,backgroundcolor=\color{light-gray}}
-\lstset{captionpos=b,extendedchars=true,inputencoding=utf8,breaklines=true,language=C++}
 
 % Gantt-Diagramm unterstützung
 \RequirePackage{pgfgantt}

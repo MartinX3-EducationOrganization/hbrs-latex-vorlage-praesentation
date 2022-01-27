@@ -1,5 +1,6 @@
 DOCUMENT_NAME = Praesentation
-COMPILER = latexmk -xelatex --output-directory=out
+# The flag "--shell-escape" is needed by the package "minted"
+COMPILER = latexmk -xelatex --output-directory=out --shell-escape
 
 default:
 	$(COMPILER) $(DOCUMENT_NAME)
