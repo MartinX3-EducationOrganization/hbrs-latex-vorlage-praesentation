@@ -1,7 +1,3 @@
-%! Package = hbrs-inf
-%! Author = martin
-%! Date = 18.01.22
-
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{aussehen/hbrs-inf}[2022/01/27 hbrs-inf theming Package]
 
@@ -11,7 +7,6 @@
 
 \RequirePackage{graphicx}
 \RequirePackage{svg}
-\usepackage[ngerman]{babel,isodate}
 \RequirePackage{csquotes}
 \RequirePackage{datetime}
 \RequirePackage{xcolor}
@@ -39,6 +34,10 @@
     pdfcreator={XeLaTeX},
     pdfkeywords={\ThesisKeywords}
 }
+
+% Deutsch
+\usepackage[ngerman]{babel}
+\usepackage[ngerman]{isodate}
 
 % Literaturverzeichnis nach ISO 690 (Nachfolger von DIN 1505)
 % Further help at https://github.com/michal-h21/biblatex-iso690
