@@ -54,13 +54,9 @@
 % Gantt-Diagramm unterstützung
 \RequirePackage{pgfgantt}
 
-%%%%%%%%
-%Makros
-%%%%%%%%
-
-% Text
-\newcommand{\todo}[1]{
-    \begin{itemize}
-        \color{red}{\item#1}
-    \end{itemize}
-}
+% To-dos
+% Fixes a warning if todonotes is used in a beamer documentclass
+\setlength {\marginparwidth }{2cm}
+\RequirePackage{todonotes}
+% Beamer needs inline to-dos
+\presetkeys{todonotes}{inline}{}
