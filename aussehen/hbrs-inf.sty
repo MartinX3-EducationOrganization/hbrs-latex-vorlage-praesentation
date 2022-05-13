@@ -35,8 +35,8 @@
 }
 
 % Deutsch
-\usepackage[ngerman]{babel}
-\usepackage[ngerman]{isodate}
+\RequirePackage[ngerman]{babel}
+\RequirePackage[ngerman]{isodate}
 
 % Quellcode einfügen und highlighten
 \RequirePackage[outputdir=out]{minted} % Needs python installed and to be loaded before csquotes
@@ -47,7 +47,7 @@
 
 % Literaturverzeichnis nach ISO 690 (Nachfolger von DIN 1505)
 % Further help at https://github.com/michal-h21/biblatex-iso690
-\usepackage[style=iso-authortitle]{biblatex}
+\RequirePackage[style=iso-authortitle]{biblatex}
 \addbibresource{datenbanken/Literaturverzeichnis.bib}
 \setbeamertemplate{bibliography item}{}
 
