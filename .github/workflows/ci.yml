@@ -23,7 +23,7 @@ jobs:
           wget https://mirrors.ctan.org/macros/latex/contrib/pdfpc.zip
           unzip -p pdfpc.zip pdfpc/pdfpc.sty > aussehen/pdfpc.sty
       - name: Compile LaTeX document
-        run: make
+        run: make build
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
