@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{aussehen/hbrs-inf}[2022/01/27 hbrs-inf theming Package]
+\ProvidesPackage{aussehen/hbrs-inf}[2022/05/19 hbrs-inf theming Package]
 
 % Enable the arial font
 \RequirePackage{fontspec}
@@ -10,11 +10,11 @@
 \RequirePackage{datetime}
 
 % Einstellungen für die Präsentation
-\usetheme{Ilmenau}
+\RequirePackage{aussehen/beamertheme}
 \title{\ThesisTitle}
 \subtitle{\ThesisSubject}
 \author{\ThesisAuthor}
-\institute{Fachbereich Informatik - Hochschule Bonn-Rhein-Sieg}
+\institute{Fachbereich \ThesisStudyCourseGerman\ - \UniversityName}
 \date{\ThesisPubDate}
 \logo{\includegraphics[height=0.5cm]{bilder/fhlogo}}
 
