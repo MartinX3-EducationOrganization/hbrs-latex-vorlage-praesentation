@@ -27,5 +27,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Praesentation.pdf.zip
+          name: Praesentation.pdf
           path: out/Praesentation.pdf
