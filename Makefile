@@ -1,5 +1,6 @@
 DOCUMENT_NAME = Praesentation
 # The flag "--shell-escape" is needed by the package "minted"
+# TODO WORKAROUND Use xelatex instead of lualatex, until the upstream PR got released in texlive https://github.com/pdfpc/latex-pdfpc/pull/6
 COMPILER = latexmk -xelatex --jobname=$(DOCUMENT_NAME) --output-directory=out --shell-escape
 
 default | help:
