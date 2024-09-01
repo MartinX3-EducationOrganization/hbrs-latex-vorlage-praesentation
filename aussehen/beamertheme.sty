@@ -1,12 +1,16 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{aussehen/beamertheme}[2024/09/01 beamertheme theming Package]
 
+% Präsentationsnotizen auf 2. Bildschirm
+% Programm pdfpc wird benötigt https://pdfpc.github.io/ https://github.com/pdfpc/pdfpc
+\RequirePackage{pdfpc}
+
 % Einstellungen für die Präsentation
 \usetheme{Antibes}
 \title{\ThesisTitle}
 \subtitle{\ThesisSubject}
 \author{\ThesisAuthor}
-\institute{Fachbereich \ThesisStudyCourseGerman - \UniversityName}
+\institute{Fachbereich \ThesisStudyCourseDepartmentGerman\ - Hochschule Bonn-Rhein-Sieg}
 \date{\ThesisPubDate}
 \logo{\includegraphics[height=0.5cm]{bilder/fhlogo}}
 
@@ -17,7 +21,6 @@
             \usebeamerfont{author in head/foot}
             \insertshortauthor
         \end{beamercolorbox}
-
         \begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}
             \usebeamerfont{title in head/foot}
             \insertshortsubtitle
