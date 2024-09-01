@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{aussehen/beamertheme}[2022/05/19 beamertheme theming Package]
+\ProvidesPackage{aussehen/beamertheme}[2024/09/01 beamertheme theming Package]
 
 % Einstellungen für die Präsentation
 \usetheme{Antibes}
@@ -11,14 +11,13 @@
 \logo{\includegraphics[height=0.5cm]{bilder/fhlogo}}
 
 % Fußzeile
-\defbeamertemplate*{footline}{split theme}
-{
-    \leavevmode
-    \hbox{
+\defbeamertemplate{footline}{my foot}{
+    \makebox[0pt][l]{
         \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{author in head/foot}
             \usebeamerfont{author in head/foot}
             \insertshortauthor
         \end{beamercolorbox}
+
         \begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}
             \usebeamerfont{title in head/foot}
             \insertshortsubtitle
@@ -26,5 +25,5 @@
             \insertframenumber/\inserttotalframenumber
         \end{beamercolorbox}
     }
-    \vskip0pt
 }
+\setbeamertemplate{footline}[my foot]
