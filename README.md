@@ -2,12 +2,12 @@ Download artifact: [![CI](https://github.com/MartinX3-EducationOrganization/hbrs
 
 # H-BRS LaTeX Vorlage
 
-Dies ist eine [LaTeX][1] Vorlage Präsentationen von wissenschaftlichen Arbeiten des [Fachbereichs Informatik][2]
+Dies ist eine [LaTeX][1] Vorlage für Präsentationen von wissenschaftlichen Arbeiten des [Fachbereichs Informatik][2]
 der [Hochschule Bonn-Rhein-Sieg][3].
 
 ## Einstieg
 
-Um diese Vorlage nutzen zu können, muss [LaTeX][1] auf Deinem Rechner installiert sein. Als compiler wird `XeLaTeX` verwendet.
+Um diese Vorlage nutzen zu können, muss [LaTeX][1] auf Deinem Rechner installiert sein. Als compiler wird `LuaLaTeX` verwendet.
 
 Als PDF-Viewer sollte [PDFPC](https://github.com/pdfpc/pdfpc) verwendet werden.  
 Dieser zeigt via pdfpc erzeugte Präsentationsnotizen an.
