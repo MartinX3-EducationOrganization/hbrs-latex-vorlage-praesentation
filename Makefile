@@ -1,6 +1,6 @@
 DOCUMENT_NAME = Praesentation
 # The flag "--shell-escape" is needed by the package "minted"
-COMPILER = latexmk -lualatex --jobname=$(DOCUMENT_NAME) --output-directory=out --shell-escape
+COMPILER = latexmk -lualatex --jobname=$(DOCUMENT_NAME) --shell-escape
 
 help:
 	@echo 'make | Zeigt die Hilfe'
@@ -10,6 +10,9 @@ help:
 	@echo 'make start | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
 
 build:
+	$(COMPILER) --output-directory=out Praesentation
+
+build_ci:
 	$(COMPILER) Praesentation
 
 clean:
