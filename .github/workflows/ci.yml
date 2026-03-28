@@ -23,5 +23,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
-          name: Praesentation.pdf
+          archive: false
           path: out/Praesentation.pdf
